@@ -6,12 +6,11 @@ class Team
     #scores = [["Giants", 67, 45, 8], ["Tigers", 60, 53, 7], ["Dragons", 60, 55, 5], ["BayStars", 56, 58, 6], ["Carp", 52, 56, 12], ["Swallows", 41, 69, 10]]
     
     #インスタンスを初期化するための特別なメソッド
-    def initialize(num)
-        scores = [["Giants", 67, 45, 8], ["Tigers", 60, 53, 7], ["Dragons", 60, 55, 5], ["BayStars", 56, 58, 6], ["Carp", 52, 56, 12], ["Swallows", 41, 69, 10]]
-        self.name = scores[num][0]
-        self.win = scores[num][1]
-        self.lose = scores[num][2]
-        self.draw = scores[num][3]
+    def initialize(name, wins, loses, draws)
+        self.name = name
+        self.win = wins
+        self.lose = loses
+        self.draw = draws
     end
     
     #インスタンスが持つメソッド（処理）
@@ -27,10 +26,16 @@ end
 
 #team = Team.new(0)
 
-(0..5).each do |num|
-    team = Team.new(num)
-    team.show_team_result
-end
+team_G = Team.new("Giants", 67, 45, 8)
+team_T = Team.new("Tigers", 60, 53, 7)
+team_D = Team.new("Dragons", 60, 55, 5)
+team_B = Team.new("BayStars", 56, 58, 6)
+team_C = Team.new("Carp", 52, 56, 12)
+team_S = Team.new("Swallows", 41, 69, 10)
 
-
-#scores = [["Giants", 67, 45, 8], ["Tigers", 60, 53, 7], ["Dragons", 60, 55, 5], ["BayStars", 56, 58, 6], ["Carp", 52, 56, 12], ["Swallows", 41, 69, 10]]
+team_G.show_team_result
+team_T.show_team_result
+team_D.show_team_result
+team_B.show_team_result
+team_C.show_team_result
+team_S.show_team_result
